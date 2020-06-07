@@ -1,0 +1,112 @@
+*******************************************************************
+************	 Yocto image build & flash steps	***********
+*******************************************************************
+
+----------------
+prerequisite
+----------------
+1) Ubuntu 16.04 system with atleast 8 GB RAM & 200 GB free space in hard drive.
+2) Unlimited internet access in ubuntu system to avoid any kind of download error.
+
+-----------------------------------------------------------
+To build Winsystem picoitx yocto image follow below steps.
+-----------------------------------------------------------
+1) Download below packages in Ubuntu system.
+	$ sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+	  build-essential chrpath socat libsdl1.2-dev
+
+	$ sudo apt-get install libsdl1.2-dev xterm sed cvs subversion coreutils texi2html \
+	  docbook-utils python-pysqlite2 help2man make gcc g++ desktop-file-utils \
+	  libgl1-mesa-dev libglu1-mesa-dev mercurial autoconf automake groff curl lzop asciidoc
+
+	$ sudo apt-get install u-boot-tools
+
+2) Create yocto setup folder in home directory and hit below commands.
+	$ mkdir ~/yocto_setup
+	$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/yocto_setup/repo
+	$ chmod a+x ~/yocto_setup/repo
+
+3) Add the following line to the .bashrc file to ensure that the ~/yocto_setup folder is in your PATH variable.
+	$ export PATH=~/yocto_setup:$PATH
+
+4) First make sure that git is set up properly with the commands below.
+	$ git config --global user.name "Your Name"
+	$ git config --global user.email "Your Email"
+	$ git config --list
+
+5) The following setup shows how to download the winsystem Yocto Project BSP recipe layers. For this, a
+   directory called winsystems-yocto-bsp is created for the project. Any name can be used instead of this.
+	$ cd ~/yocto_setup
+	$ mkdir winsystems-yocto-bsp
+	$ cd winsystems-yocto-bsp
+	$ repo init -u https://github.com/WinSystems/c444-manifest -b master
+	$ repo sync
+
+6) Follow below command to start winsystem yocto project build. 
+	$ DISTRO=fsl-imx-xwayland MACHINE=imx8mqpicoitx source winsys-setup-release.sh -b build
+
+7) Accept the EULA license then use below command to start build image.
+	$ DISTRO=fsl-imx-xwayland MACHINE=imx8mqpicoitx bitbake fsl-image-validation-imx
+
+NOTE : 
+	* It will take approx 7 to 8 hours to build image for 1st time build
+	* If any error comes during yocto build follow below steps.
+		$ bitbake fsl-image-validation-imx -c cleanall
+		$ bitbake fsl-image-validation-imx
+
+-----------------------------------------------------------
+To flash Winsystem picoitx yocto image follow below steps.
+-----------------------------------------------------------
+1) To flash yocto image we have to use UUU(Universal Updater Utility) which is
+   available for both Linux as well as windows.
+
+   To download UUU utility refer given link : https://github.com/NXPmicro/mfgtools
+
+2) To download UUU in linux system follow given steps.
+	$ cd ~/yocto_setup
+	$ git clone https://github.com/NXPmicro/mfgtools.git
+	$ cd mfgtools
+	$ sudo apt-get install libusb-1.0-0-dev libzip-dev libbz2-dev pkg-config
+	$ cmake .
+	$ make
+
+3) Get bootloader file & sdcard image from yocto build directory.
+	$ cd ~/yocto_setup/winsystems-yocto-bsp/build/tmp/deploy/images/imx8mqpicoitx/
+	$ cp imx-boot-imx8mqpicoitx-sd.bin-flash_evk ~/yocto_setup/.
+	$ cp fsl-image-validation-imx-imx8mqpicoitx-20190725061828.rootfs.sdcard.bz2 ~/yocto_setup/.
+
+NOTE: The <*.sdcard.bz2> file name not remains same and it will be different for each build based on timestamp of compilation.
+
+4) To extract the sdcard image.
+	$ cd ~/yocto_setup
+	$ bunzip2 -dk -f ./fsl-image-validation-imx-imx8mqpicoitx-20190725061828.rootfs.sdcard.bz2
+
+5) Connect the Winsystem iMX8MQ picoitx board with serial download mode setup using type A2A cable into 
+   USB 3.0 OTG port.
+
+NOTE: Set SW1 as 01 for serial download mode.
+
+6) To flash image into Winsystem iMX8MQ picoitx board eMMC.
+	$ cd ~/yocto_setup/mfgtools/uuu
+	$ ./uuu -b emmc_all ~/yocto_setup/imx-boot-imx8mqpicoitx-sd.bin-flash_evk ~/yocto_setup/fsl-image-validation-imx-imx8mqpicoitx-20190725061828.rootfs.sdcard
+
+NOTE: 
+	* The <*.sdcard> file name not remains same and it will be different for each build based on timestamp of compilation.
+	* When we flash using the "uuu" Serial Debug console need to be connected and also started using the minicom or any other serial tool.
+
+7) To boot from internal eMMC set Winsystem iMX8MQ picoitx board into internal boot mode.
+
+NOTE: Set SW1 as 10 for internal boot mode.
+
+-----------------------------------------------------------
+To Modify Display at Boot
+-----------------------------------------------------------
+
+1) To set hdmi as display in Linux modify  the mmcargs environment variable in u-boot.
+	setenv mmcargs 'setenv bootargs console=${console} root=${mmcroot} video=HDMI-A-1:1920x1080-32@60'
+
+Note: adjust resolution, color, and frequency as needed
+
+2) To set AUO panel as display in Linux modify the fdt_file environment variable in u-boot.
+	setenv fdt_file 'fsl-imx8mq-picoitx-lvds-auo.dtb'
+
