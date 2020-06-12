@@ -29,7 +29,7 @@
 
   <project remote="CAF" revision="43dc308f943680a8ebdd7bd628190a2835ededc2" name="meta-fsl-bsp-release" path="sources/meta-fsl-bsp-release" />
 
-  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="21166a369c3ecdb93b08b2a6f4d9ff3aab1c4fd3" >
+  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="master" >
      <linkfile src="imx/tools/winsys-setup-release.sh" dest="winsys-setup-release.sh"/>
      <linkfile src="imx/README" dest="README-IMXBSP"/>
   </project>
