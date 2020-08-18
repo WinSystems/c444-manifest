@@ -39,8 +39,7 @@
   <project name="poky" path="sources/poky" remote="yocto" revision="cba967414370e195d109353e51510bd829aa86c3"/>
 
   <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="itx-p-c444_5.4.24" >
-     <linkfile src="imx/tools/winsys-setup-release.sh" dest="winsys-setup-release.sh"/>
-     <linkfile src="imx/README" dest="README-ITX-P-C444"/>
+     <linkfile src="tools/winsys-setup-release.sh" dest="winsys-setup-release.sh"/>
   </project>
 
 </manifest>
