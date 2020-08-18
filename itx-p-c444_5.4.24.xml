@@ -12,7 +12,7 @@
   <remote fetch="git://github.com/meta-rust"  name="rust"/>
   <remote fetch="git://git.openembedded.org"  name="python2"/>
   <remote fetch="https://source.codeaurora.org/external/imx" name="CAF"/>
-  <remote fetch="https://github.com/WinSystems/meta-winsys" name="winsys"/>
+  <remote fetch="https://github.com/WinSystems" name="winsys"/>
 
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="01488a237cdf45b3087420e169c9f67b84fd7373">
     <linkfile dest="README" src="README"/>
