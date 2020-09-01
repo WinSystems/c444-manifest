@@ -38,7 +38,9 @@
   <project name="meta-timesys" path="sources/meta-timesys" remote="Timesys" revision="e97b31ca34018393544f82f68855bf5f82a32da4"/>
 
   <project name="poky" path="sources/poky" remote="yocto" revision="cba967414370e195d109353e51510bd829aa86c3"/>
-
+  
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="b8d5b854033bc90808daf766e6bf817a2aee284b"/>
+  
   <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="itx-p-c444_5.4.24" >
      <linkfile src="tools/winsys-setup-release.sh" dest="winsys-setup-release.sh"/>
   </project>
