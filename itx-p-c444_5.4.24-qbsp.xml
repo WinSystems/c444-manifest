@@ -40,8 +40,8 @@
   <project name="meta-qt5" path="sources/meta-qt5" remote="QT5" revision="b434031733b5fc0889ce89af669950f6b1cd9aa1"/>
 
   <project name="meta-boot2qt"
-        remote="qt"
-        revision="87aa841d608cf852963baae808019b0a6961d15c"
+        remote="winsys"
+        revision="770daae61ee0ae005b9fb3f0b9caa01743d25927"
         path="sources/meta-boot2qt">
   </project>
 
@@ -53,7 +53,7 @@
   
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="440c37f0b623ccc0aa0328613908608d6362adda"/>
   
-  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="itx-p-c444_5.4.24" >
+  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="dcb36c365f16efe7517819c16f398fe88ed6527d" >
      <linkfile src="tools/winsys-setup-release.sh" dest="winsys-setup-release.sh"/>
   </project>
 
