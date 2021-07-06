@@ -53,7 +53,7 @@
   
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="440c37f0b623ccc0aa0328613908608d6362adda"/>
   
-  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="dcb36c365f16efe7517819c16f398fe88ed6527d" >
+  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="a29d67f832fe4ee2c5247d4f56e69a55665ce438" >
      <linkfile src="tools/winsys-setup-release.sh" dest="winsys-setup-release.sh"/>
   </project>
 
