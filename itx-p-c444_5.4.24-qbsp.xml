@@ -37,11 +37,11 @@
 
   <project name="meta-python2" path="sources/meta-python2" remote="python2" revision="231c3d74cfcf734c3415e86ea8dd97f73ddced9d"/>
 
-  <project name="meta-qt5" path="sources/meta-qt5" remote="QT5" revision="b434031733b5fc0889ce89af669950f6b1cd9aa1"/>
+  <project name="meta-qt5" path="sources/meta-qt5" remote="qt" revision="845a1421d10ce94a4f425915a7d008810a2f626c"/>
 
   <project name="meta-boot2qt"
         remote="winsys"
-        revision="770daae61ee0ae005b9fb3f0b9caa01743d25927"
+        revision="de154324b179a3aeb5c49e3f9aab788cb14da415"
         path="sources/meta-boot2qt">
   </project>
 
