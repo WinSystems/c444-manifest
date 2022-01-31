@@ -52,8 +52,10 @@
   <project name="poky" path="sources/poky" remote="yocto" revision="cba967414370e195d109353e51510bd829aa86c3"/>
   
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="440c37f0b623ccc0aa0328613908608d6362adda"/>
+
+  <project name="meta-mingw" path="sources/meta-mingw" remote="yocto" revision="756963cc28ebc163df7d7f4b4ee004c18d3d3260"/>
   
-  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="694d49fc24918565484bd0ce3d341d0b76ecb49c" >
+  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="e948d73a57f32e3d5ff2517b43d59e8252a5a0a9" >
      <linkfile src="tools/winsys-setup-release.sh" dest="winsys-setup-release.sh"/>
   </project>
 
