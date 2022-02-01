@@ -41,7 +41,7 @@
 
   <project name="meta-boot2qt"
         remote="winsys"
-        revision="38710da6624de34f5d0d5cd863fa5b0418945d4d"
+        revision="ae401687bd1861f2ce919e52e5506b8ae6bf7d6e"
         path="sources/meta-boot2qt">
   </project>
 
