@@ -9,6 +9,7 @@
   <remote fetch="https://github.com/OSSystems" name="OSSystems"/>
   <remote fetch="https://github.com/meta-qt5"  name="QT5"/>
   <remote fetch="https://github.com/TimesysGit"  name="Timesys"/>
+  <remote fetch="https://github.com/kraj" name="clang"/>
   <remote fetch="https://github.com/meta-rust"  name="rust"/>
   <remote fetch="https://git.openembedded.org"  name="python2"/>
   <remote fetch="https://source.codeaurora.org/external/imx" name="CAF"/>
@@ -21,7 +22,7 @@
 
   <project name="meta-clang" path="sources/meta-clang" remote="clang" revision="85d956d95401479ca666139e31f662f60c156d5f" upstream="kirkstone"/>
   <project name="meta-browser" path="sources/meta-browser" remote="OSSystems" revision="d25d8ee98a656b2534d0eec6138ef264529fab4f"/>
-  
+
   <project name="meta-freescale" path="sources/meta-freescale" remote="community" revision="2fb1ce365338126aad365012ebb913b3e4a9f1be" upstream="kirkstone"/>
   <project name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty" remote="community" revision="de0eb1408150d77f9cce97c559f9a5a3c71e5d6c" upstream="kirkstone"/>
   <project name="meta-freescale-distro" path="sources/meta-freescale-distro" remote="community" revision="fc15f5003043da23212596be7366ae2547c308ad" upstream="kirkstone"/>
