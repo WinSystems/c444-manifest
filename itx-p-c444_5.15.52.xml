@@ -12,6 +12,7 @@
   <remote fetch="https://github.com/openembedded" name="oe"/>
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://github.com/nxp-imx-support" name="imx-support"/>
+  <remote fetch="https://github.com/WinSystems" name="winsys"/>
 
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="60f79f7af60537146298560079ae603260f0bd14" upstream="kirkstone">
     <linkfile dest="README" src="README"/>
