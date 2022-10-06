@@ -36,6 +36,8 @@
   <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="cca772a457a75b2661371932ff79c392da3118db" upstream="master"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="602922d492351ee747d2ff00f8ed5aab284a706b" upstream="kirkstone"/>
 
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="kirkstone"/>
+
   <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="itx-p-c444_5.15.52" >
      <linkfile src="tools/winsys-setup-release.sh" dest="winsys-setup-release.sh"/>
   </project>
