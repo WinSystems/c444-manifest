@@ -8,12 +8,14 @@
   <remote fetch="https://github.com/openembedded" name="oe"/>
   <remote fetch="https://github.com/OSSystems" name="OSSystems"/>
   <remote fetch="https://github.com/meta-qt5"  name="QT5"/>
+  <remote fetch="https://code.qt.io/yocto"  name="QT6"/>
   <remote fetch="https://github.com/TimesysGit"  name="Timesys"/>
   <remote fetch="https://github.com/kraj" name="clang"/>
   <remote fetch="https://github.com/meta-rust"  name="rust"/>
   <remote fetch="https://git.openembedded.org"  name="python2"/>
-  <remote fetch="https://source.codeaurora.org/external/imx" name="CAF"/>
+  <remote fetch="https://source.codeaurora.org/external/imx" name="CAF"/>   
   <remote fetch="https://github.com/WinSystems" name="winsys"/>
+  <remote fetch="https://source.codeaurora.org/external/imxsupport" name="imx-support"/>     
 
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="60f79f7af60537146298560079ae603260f0bd14" upstream="kirkstone">
     <linkfile dest="README" src="README"/>
@@ -33,17 +35,17 @@
   </project>
 
   <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="5357c7a40eaf8d1bcf7ff58edbba8e9527e40c7d" upstream="kirkstone"/>
-  <project name="meta-python2" path="sources/meta-python2" remote="python2" revision="231c3d74cfcf734c3415e86ea8dd97f73ddced9d"/>
-  <project name="meta-qt5" path="sources/meta-qt5" remote="QT5" revision="b8bcf8cb576d072f435a0177375e54424f67d1c9"/>
-  <project name="meta-rust" path="sources/meta-rust" remote="rust" revision="a012a1027defe28495f06ed522a7a82bdd59a610"/>
-
+  <project name="meta-python2" path="sources/meta-python2" remote="python2" revision="f02882e2aa9279ca7becca8d0cedbffe88b5a253" upstream="kirkstone"/>
+  <project name="meta-qt6" path="sources/meta-qt6" remote="QT6" revision="b2894aad5c1aaa85f2f5c7b94391b7c51c39e555" upstream="6.3"/>
+  <project name="meta-nxp-demo-experience" path="sources/meta-nxp-demo-experience" remote="imx-support" revision="8fade3993b832ecd823771644f2a7b731f8f4527" upstream="kirkstone"/>  
+  
   <project name="meta-timesys" path="sources/meta-timesys" remote="Timesys" revision="edce180f0389a13e678cb0edafb7f8980648e1a4"/>
 
   <project name="poky" path="sources/poky" remote="yocto" revision="27de52e402ae000dfa502d52908cd6e6aef923ec" upstream="kirkstone"/>
   
-  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="440c37f0b623ccc0aa0328613908608d6362adda"/>
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="c79262a30bd385f5dbb009ef8704a1a01644528e" upstream="kirkstone"/>
   
-  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" upstream="itx-p-c444_5.15.32" >
+  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="itx-p-c444_5.15.32" >
      <linkfile src="tools/winsys-setup-release.sh" dest="winsys-setup-release.sh"/>
   </project>
 
