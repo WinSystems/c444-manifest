@@ -13,9 +13,9 @@
   <remote fetch="https://github.com/kraj" name="clang"/>
   <remote fetch="https://github.com/meta-rust"  name="rust"/>
   <remote fetch="https://git.openembedded.org"  name="python2"/>
-  <remote fetch="https://source.codeaurora.org/external/imx" name="CAF"/>   
+  <remote fetch="https://github.com/nxp-imx/" name="CAF"/>   
   <remote fetch="https://github.com/WinSystems" name="winsys"/>
-  <remote fetch="https://source.codeaurora.org/external/imxsupport" name="imx-support"/>     
+  <remote fetch="https://github.com/nxp-imx-support/" name="imx-support"/>     
 
   <project name="fsl-community-bsp-base" path="sources/base" remote="community" revision="60f79f7af60537146298560079ae603260f0bd14" upstream="kirkstone">
     <linkfile dest="README" src="README"/>
