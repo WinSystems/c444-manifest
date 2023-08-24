@@ -22,7 +22,7 @@
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <project name="meta-clang" path="sources/meta-clang" remote="clang" revision="85d956d95401479ca666139e31f662f60c156d5f" upstream="kirkstone"/>
+  <project name="meta-clang" path="sources/meta-clang" remote="clang" revision="2d08d6bf376a1e06c53164fd6283b03ec2309da4" upstream="kirkstone"/>
   <project name="meta-browser" path="sources/meta-browser" remote="OSSystems" revision="d25d8ee98a656b2534d0eec6138ef264529fab4f"/>
 
   <project name="meta-freescale" path="sources/meta-freescale" remote="community" revision="2fb1ce365338126aad365012ebb913b3e4a9f1be" upstream="kirkstone"/>
