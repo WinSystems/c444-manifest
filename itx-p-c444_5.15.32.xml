@@ -41,7 +41,7 @@
   
   <project name="meta-timesys" path="sources/meta-timesys" remote="Timesys" revision="edce180f0389a13e678cb0edafb7f8980648e1a4"/>
 
-  <project name="poky" path="sources/poky" remote="yocto" revision="27de52e402ae000dfa502d52908cd6e6aef923ec" upstream="kirkstone"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="3272e64a731280206d13fe746e4b9e3a5e7c73a8" upstream="kirkstone"/>
   
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="c79262a30bd385f5dbb009ef8704a1a01644528e" upstream="kirkstone"/>
   
