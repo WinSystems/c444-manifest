@@ -45,7 +45,7 @@
   
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="c79262a30bd385f5dbb009ef8704a1a01644528e" upstream="kirkstone"/>
   
-  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="itx-p-c444_5.15.32" >
+  <project remote="winsys" name="meta-winsys" path="sources/meta-winsys" revision="debug" >
      <linkfile src="tools/winsys-setup-release.sh" dest="winsys-setup-release.sh"/>
   </project>
 
